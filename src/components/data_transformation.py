@@ -83,6 +83,7 @@ class DataTransformation:
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
 
+            # this np.c_ will create last column in input_feature_train_arr of target_feature_train_df
             train_arr = np.c_[
                 input_feature_train_arr,np.array(target_feature_train_df)
             ]
@@ -95,6 +96,8 @@ class DataTransformation:
                 file_path = self.data_transformation_config.preprocessor_obj_file_path,
                 obj = preprocessing_obj
             )
+            # logging.info("checking train_arr after data transformation",train_arr)
+            # logging.info("checking test_arr after data transformation",test_arr)
 
             return(
                 train_arr,
