@@ -16,7 +16,7 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-    name='DS-project',
+    name='Student-Performance-Prediction',
     version='0.0.1',
     author='RiyankVaghasiya',
     author_email='vaghasiyariyank@gmail.com',
